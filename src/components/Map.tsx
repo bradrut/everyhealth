@@ -15,6 +15,8 @@ interface MapProps {
 
 function Map({ centerLat=37.0902, centerLong=-95.7129, zoom=4, scrollWheelZoom=true, orgData=undefined }: MapProps) {
 
+  // TODO: Render multiple MapMarkers dynamically below
+
   return (
     <MapContainer center={[centerLat, centerLong]} zoom={zoom} scrollWheelZoom={scrollWheelZoom}>
       <TileLayer

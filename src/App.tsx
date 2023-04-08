@@ -1,5 +1,6 @@
 import './App.css';
 import Map from './components/Map';
+import { APTC_TRAINING_CLINICS } from './data/aptcTrainingClinics';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
         <p>If you are seeking the support of a therapist or counselor but aren't able to afford the cost, consider
           looking into <span className='text-highlight'><b>official APTC training clinics</b></span> near you.</p>
         <p>These clinics, officially recognized by the Association of Psychology Training Clinics, are typically universities...</p>
-        <Map />
+        <Map orgData={APTC_TRAINING_CLINICS} />
 
         {/* Footer */}
       </div>

@@ -1,6 +1,7 @@
 export interface OrgInfo {
   name: string;
   director?: string;
-  zip: number;
+  markerLat: number;
+  markerLong: number;
   url: string;
 }

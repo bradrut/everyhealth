@@ -3,6 +3,7 @@ import React from 'react';
 import { Popup } from 'react-leaflet';
 
 import { OrgInfo } from '../common/types';
+import './OrgPopup.css';
 
 function OrgPopup({ orgInfo }: { orgInfo: OrgInfo }) {
 
@@ -11,9 +12,9 @@ function OrgPopup({ orgInfo }: { orgInfo: OrgInfo }) {
 
   return (
     <Popup>
-      <h3>{orgInfo.name}</h3>
-      <p>location-placeholder</p>
-      <p>{orgInfo.url}</p>
+      <h3 className='orgNameText'>{orgInfo.orgName}</h3>
+      <p className='locationText'>{orgInfo.cityAndState}</p>
+      <a href={orgInfo.url} target="_blank" rel="noopener noreferrer">Clinic Website</a>
     </Popup>
   );
 }

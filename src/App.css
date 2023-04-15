@@ -46,6 +46,23 @@
   color: #61dafb;
 }
 
+.heading-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-shadow: 2px 2px 18px #000;
+}
+
+.therapy-img {
+  max-width: 60vw;
+  float: left;
+  border-radius: 2px;
+  filter: brightness(45%);
+  /* margin-right: 15px; */
+}
+
 p {
   font-size: 14px;
   text-align: left;

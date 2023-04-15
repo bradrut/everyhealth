@@ -88,7 +88,6 @@ const useStyles = createStyles((theme) => ({
   linkActive: {
     '&, &:hover': {
       color: COLORS.white + ' !important',
-      fontWeight: 'bold',
       backgroundColor: COLORS.secondaryHighlight,
     },
   },

@@ -64,6 +64,10 @@ with open('../aptc-training-clinics.csv', mode ='r')as inputFile:
 
     if recordLineIndex == 3:
       outputFile.write("url: '" + combine_line(line) + "'\n  },\n")
+      # outputFile.write("url: '" + combine_line(line) + "',\n    ")
+    
+    # if recordLineIndex == 4:
+      # outputFile.write("clinicName: '" + combine_line(line) + "'\n  },\n")
 
     recordLineIndex = recordLineIndex + 1
   

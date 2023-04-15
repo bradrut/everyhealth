@@ -14,7 +14,7 @@ function OrgPopup({ orgInfo }: { orgInfo: OrgInfo }) {
     <Popup>
       <h3 className='orgNameText'>{orgInfo.orgName}</h3>
       <p className='locationText'>{orgInfo.cityAndState}</p>
-      <a href={orgInfo.url} target="_blank" rel="noopener noreferrer">Clinic Website</a>
+      <a href={orgInfo.url} target="_blank" rel="noopener noreferrer">Training Clinic Website</a>
     </Popup>
   );
 }

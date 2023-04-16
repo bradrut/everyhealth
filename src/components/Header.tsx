@@ -19,9 +19,9 @@ const HEADER_HEIGHT = rem(50);
 const useStyles = createStyles((theme) => ({
   root: {
     position: 'fixed',
-    zIndex: 1,
+    zIndex: 999,
     width: '100%',
-    backgroundColor: COLORS.background,
+    background: COLORS.background,
     marginBottom: '1rem !important',
     border: 'none',
   },
@@ -71,7 +71,7 @@ const useStyles = createStyles((theme) => ({
     padding: `${rem(8)} ${rem(12)}`,
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
-    color: '#FFF !important',
+    color: '#FFF',
     fontSize: theme.fontSizes.sm,
     fontWeight: 'normal',
 
@@ -87,7 +87,7 @@ const useStyles = createStyles((theme) => ({
 
   linkActive: {
     '&, &:hover': {
-      color: COLORS.white + ' !important',
+      color: COLORS.black + ' !important',
       backgroundColor: COLORS.secondaryHighlight,
     },
   },

@@ -17,7 +17,7 @@ function Map({ centerLat=37.0902, centerLong=-95.7129, zoom=4, scrollWheelZoom=t
   // TODO: Render multiple MapMarkers dynamically below
 
   return (
-    <MapContainer center={[centerLat, centerLong]} zoom={zoom} scrollWheelZoom={scrollWheelZoom}>
+    <MapContainer id='trainingClinicsMap' center={[centerLat, centerLong]} zoom={zoom} scrollWheelZoom={scrollWheelZoom}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>

@@ -9,13 +9,12 @@ const ICON_URL = require('../assets/map-marker-icon.png');
 const CUSTOM_MARKER_ICON = new L.Icon({
   iconUrl: ICON_URL,
   iconRetinaUrl: ICON_URL,
-  iconAnchor: undefined,
+  iconAnchor: [15, 46],   // [x, y] here should be [0.5x, 1x] the iconSize (to set the anchor to the tip of the map marker)
   popupAnchor: [0, -16],
   shadowUrl: undefined,
   shadowSize: undefined,
   shadowAnchor: undefined,
   iconSize: new L.Point(30, 46),
-  // className: 'leaflet-div-icon'
 });
 
 function MapMarker({ orgInfo }: { orgInfo: OrgInfo }) {

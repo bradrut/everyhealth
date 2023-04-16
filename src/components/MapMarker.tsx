@@ -10,7 +10,7 @@ const CUSTOM_MARKER_ICON = new L.Icon({
   iconUrl: ICON_URL,
   iconRetinaUrl: ICON_URL,
   iconAnchor: [15, 46],   // [x, y] here should be [0.5x, 1x] the iconSize (to set the anchor to the tip of the map marker)
-  popupAnchor: [0, -16],
+  popupAnchor: [0, -39],
   shadowUrl: undefined,
   shadowSize: undefined,
   shadowAnchor: undefined,

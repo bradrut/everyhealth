@@ -14,6 +14,7 @@ import { useDisclosure } from '@mantine/hooks';
 
 import { COLORS } from '../common/colors';
 import '../App.css';
+import LogoIcon from '../assets/leaves-icon.svg';
 
 const HEADER_HEIGHT = rem(50);
 
@@ -24,6 +25,12 @@ const useStyles = createStyles((theme) => ({
     width: '100%',
     marginBottom: '1rem !important',
     border: 'none',
+  },
+
+  logoContainer: {
+    display: 'flex',
+    alignItems: 'left',
+    textDecoration: 'none',
   },
 
   dropdown: {
@@ -120,7 +127,18 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root + ' App-background-gradient'}>
       <Container className={classes.header}>
-        <a href={'#'} rel="noopener noreferrer"><p style={{ color: COLORS.header, fontFamily: 'verdana', fontSize: 20, float: 'left' }}>Care 4 Everyone</p></a>
+        <div>
+          <a href={'#'} rel="noopener noreferrer" className={classes.logoContainer}>
+            <img src={LogoIcon} style={{ maxWidth: '44px' }}></img>
+            <p style={{ color: COLORS.primaryHighlight, fontFamily: 'verdana', fontSize: 20, float: 'left', lineHeight: .8 }}>Every
+              <span style={{ color: COLORS.white }}>Health
+                <span style={{ fontSize: '13px' }}>
+                  <br/>Resources & Care
+                </span>
+              </span>
+            </p>
+          </a>
+        </div>
         <Group spacing={5} className={classes.links}>
           {linkComponents}
         </Group>

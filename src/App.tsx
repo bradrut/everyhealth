@@ -21,7 +21,7 @@ function App() {
 
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
-      <div className="App" style={{ background: COLORS.background }}>
+      <div className="App App-background-gradient">
         <HeaderResponsive links={HEADER_LINKS}></HeaderResponsive>
         <div className="body-content">
           <div style={{ position: 'relative', textAlign: 'center', overflow: 'auto', marginTop: '30px', marginBottom: '30px' }}>

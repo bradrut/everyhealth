@@ -1,5 +1,5 @@
 export const COLORS = {
-  background: 'linear-gradient(90deg, rgba(72,92,112,1) 0%, rgba(91,112,133,1) 50%, rgba(72,92,112,1) 100%)',
+  background: '#485c70', // The actual gradient code for this is defined in App.css (separately from here intentionally, to support maximum compatability)
   text: '#FFF',
   primaryHighlight: '#79B996',
   secondaryHighlight: '#79B996', //6A85A0

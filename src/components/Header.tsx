@@ -13,6 +13,7 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 
 import { COLORS } from '../common/colors';
+import '../App.css';
 
 const HEADER_HEIGHT = rem(50);
 
@@ -21,7 +22,6 @@ const useStyles = createStyles((theme) => ({
     position: 'fixed',
     zIndex: 999,
     width: '100%',
-    background: COLORS.background,
     marginBottom: '1rem !important',
     border: 'none',
   },
@@ -118,7 +118,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   ));
 
   return (
-    <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
+    <Header height={HEADER_HEIGHT} mb={120} className={classes.root + ' App-background-gradient'}>
       <Container className={classes.header}>
         <a href={'#'} rel="noopener noreferrer"><p style={{ color: COLORS.header, fontFamily: 'verdana', fontSize: 20, float: 'left' }}>Care 4 Everyone</p></a>
         <Group spacing={5} className={classes.links}>

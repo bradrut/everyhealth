@@ -9,7 +9,8 @@ import { MantineProvider } from '@mantine/core';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Homepage from './components/Homepage';
+import Home from './components/routes/Home';
+import Contact from './components/routes/Contact';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Homepage />
+        element: <Home />
       },
       {
         path: '/about',
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/contact',
-        // element: <ContactPage />,  // TODO!
+        element: <Contact />,  // TODO!
       },
     ]
   },

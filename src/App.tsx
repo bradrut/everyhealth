@@ -2,7 +2,6 @@ import { Outlet } from 'react-router';
 
 import './App.css';
 import { HeaderResponsive } from './components/Header';
-import Homepage from './components/Homepage';
 
 const HEADER_LINKS = [
   { link: '/', label: 'Home' },

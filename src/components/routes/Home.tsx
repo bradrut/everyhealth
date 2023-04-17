@@ -1,13 +1,13 @@
-import '../App.css';
-import './Homepage.css';
-import Map from './Map';
-import { COLORS } from '../common/colors';
-import TherapyImage from '../assets/mental-health-counselling-therapy.jpeg';
-import { APTC_TRAINING_CLINICS } from '../data/aptcTrainingClinics';
+import '../../App.css';
+import './Home.css';
+import Map from '../Map';
+import { COLORS } from '../../common/colors';
+import TherapyImage from '../../assets/mental-health-counselling-therapy.jpeg';
+import { APTC_TRAINING_CLINICS } from '../../data/aptcTrainingClinics';
 
 const TEXT_HIGHLIGHT_STYLE = { color: COLORS.primaryHighlight };
 
-export function Homepage() {
+export function Home() {
 
   return (
     <div className="body-content">
@@ -24,4 +24,4 @@ export function Homepage() {
   );
 }
 
-export default Homepage;
+export default Home;

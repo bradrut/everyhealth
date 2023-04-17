@@ -1,0 +1,38 @@
+.contact-form {
+  margin-top: 20px;
+  padding: 30px;
+  text-shadow: 1px 1px 80px #000;
+}
+
+.contact-form-card {
+  /* background-color: #79B996; */
+  border: 2px solid #79B996;
+  border-radius: 5px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.contact-form-title {
+  color: #79B996;
+  font-family: Verdana, serif;
+}
+
+.contact-form-subtitle {
+  font-family: Verdana, serif;
+  text-align: center;
+}
+
+.mantine-InputWrapper-label {
+  color: #FFF;
+  font-weight: bold;
+}
+
+.contact-form-btn {
+  background-color: #79B996;
+  color: black;
+  font-weight: 400;
+}
+
+.contact-form-btn:hover {
+  background-color: #6faa89;
+}

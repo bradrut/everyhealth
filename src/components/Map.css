@@ -1,7 +1,10 @@
 .leaflet-container {
   height: 480px;
   width: 60vw;
+  max-width: 60vw;
   margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 1px;
 }
 

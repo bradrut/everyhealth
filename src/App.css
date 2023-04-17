@@ -28,39 +28,8 @@
   pointer-events: none;
 }
 
-.body-content {
-  width: 60vw;
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-@media only screen and (max-width: 1026px) {
-  .body-content {
-      width: 94vw;
-  }
-}
-
 .App-link {
   color: #61dafb;
-}
-
-.heading-text {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-shadow: 2px 2px 18px #000;
-  width: 60%;
-}
-
-.therapy-img {
-  max-width: 60vw;
-  float: left;
-  border-radius: 2px;
-  filter: brightness(45%);
-  z-index: 1;
-  /* margin-right: 15px; */
 }
 
 p {

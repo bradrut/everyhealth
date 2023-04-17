@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom'
 import {
   createStyles,
   Header,
@@ -12,8 +13,8 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
-import { COLORS } from '../common/colors';
 import '../App.css';
+import { COLORS } from '../common/colors';
 import LogoIcon from '../assets/leaves-icon.svg';
 
 const HEADER_HEIGHT = rem(50);
@@ -105,30 +106,37 @@ interface HeaderResponsiveProps {
 }
 
 export function HeaderResponsive({ links }: HeaderResponsiveProps) {
-  const [opened, { toggle, close }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  /**
+   * Set activeLink based on the current url pathname. This ensures that the active link is accurate
+   * even after a hard refresh. 
+   */
+  let location = useLocation();
+  const [ activeLink, setActiveLink ] =
+  useState((links.find((link) => ('/' + link.link === location.pathname)))?.link);
+
+  const [ opened, { toggle } ] = useDisclosure(false);
   const { classes, cx } = useStyles();
 
   const linkComponents = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={cx(classes.link, { [classes.linkActive]: active === link.link })}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-        close();
-      }}
-    >
-      {link.label}
-    </a>
+    <div>
+      <Link
+        key={link.label}
+        to={link.link}
+        className={cx(classes.link, { [classes.linkActive]: activeLink === link.link })}
+        onClick={(event: any) => {
+          setActiveLink(link.link);
+        }}
+      >
+        {link.label}
+      </Link>
+    </div>
   ));
 
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root + ' App-background-gradient'}>
       <Container className={classes.header}>
         <div>
-          <a href={'#'} rel="noopener noreferrer" className={classes.logoContainer}>
+          <Link to={'/'} rel="noopener noreferrer" className={classes.logoContainer}>
             <img src={LogoIcon} style={{ maxWidth: '44px' }}></img>
             <p style={{ color: COLORS.primaryHighlight, fontFamily: 'verdana', fontSize: 20, float: 'left', lineHeight: .8 }}>Every
               <span style={{ color: COLORS.white }}>Health
@@ -137,7 +145,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
                 </span>
               </span>
             </p>
-          </a>
+          </Link>
         </div>
         <Group spacing={5} className={classes.links}>
           {linkComponents}

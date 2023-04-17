@@ -17,7 +17,7 @@ import '../App.css';
 import { COLORS } from '../common/colors';
 import LogoIcon from '../assets/leaves-icon.svg';
 
-const HEADER_HEIGHT = rem(50);
+const HEADER_HEIGHT = rem(60);
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -77,7 +77,7 @@ const useStyles = createStyles((theme) => ({
     display: 'block',
     lineHeight: 1,
     padding: `${rem(8)} ${rem(12)}`,
-    borderRadius: theme.radius.sm,
+    // borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color: '#FFF',
     fontSize: theme.fontSizes.sm,
@@ -95,8 +95,10 @@ const useStyles = createStyles((theme) => ({
 
   linkActive: {
     '&, &:hover': {
-      color: COLORS.black + ' !important',
-      backgroundColor: COLORS.secondaryHighlight,
+      color: COLORS.secondaryHighlight + ' !important',
+      paddingBottom: '0.6rem 0.75rem',
+      fontWeight: 'bold',
+      borderBottom: '2px solid ' + COLORS.secondaryHighlight,
     },
   },
 }));

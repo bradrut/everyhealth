@@ -19,63 +19,66 @@ export default function Contact() {
   });
 
   return (
-    // <div className='contact-form-card'>
-      <form className='contact-form' onSubmit={form.onSubmit(() => {})}>
-        <Title
-          order={2}
-          size="h1"
-          // sx={(theme) => ({ fontFamily: 'Verdana, serif' })}
-          weight={900}
-          align="center"
-          className='contact-form-title contact-form-heading'
-        >
-          Get in touch
-        </Title>
-        <p className='contact-form-subtitle contact-form-heading'>See an issue with the site? Have an idea? Just want to say thanks?<br/>Send us a message!</p>
-        <SimpleGrid cols={2} mt="xl" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
-          <TextInput
-            color='white !important'
-            label="Name"
-            placeholder="Your name"
-            name="name"
-            variant="filled"
-            {...form.getInputProps('name')}
-          />
-          <TextInput
-            label="Email"
-            placeholder="Your email"
-            name="email"
-            variant="filled"
-            {...form.getInputProps('email')}
-          />
-        </SimpleGrid>
+    <form className='contact-form' action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="a8021967-dec3-4d4b-859b-6a939064ea63"/>
 
+      <Title
+        order={2}
+        size="h1"
+        // sx={(theme) => ({ fontFamily: 'Verdana, serif' })}
+        weight={900}
+        align="center"
+        className='contact-form-title contact-form-heading'
+      >
+        Get in touch
+      </Title>
+      <p className='contact-form-subtitle contact-form-heading'>See an issue with the site? Have an idea? Just want to say thanks?<br/>Send us a message!</p>
+
+      <SimpleGrid cols={2} mt="xl" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
         <TextInput
-          label="Subject"
-          placeholder="Subject"
-          mt="md"
-          name="subject"
+          color='white !important'
+          label="Name"
+          placeholder="Your name"
+          name="name"
           variant="filled"
-          {...form.getInputProps('subject')}
+          {...form.getInputProps('name')}
         />
-        <Textarea
-          mt="md"
-          label="Message"
-          placeholder="Your message"
-          maxRows={10}
-          minRows={5}
-          autosize
-          name="message"
+        <TextInput
+          label="Email"
+          placeholder="Your email"
+          name="email"
           variant="filled"
-          {...form.getInputProps('message')}
+          {...form.getInputProps('email')}
         />
+      </SimpleGrid>
 
-        <Group position="center" mt="xl">
-          <Button className='contact-form-btn' type="submit" size="md">
-            Send message
-          </Button>
-        </Group>
-      </form>
-    // </div>
+      <TextInput
+        label="Subject"
+        placeholder="Subject"
+        mt="md"
+        name="subject"
+        variant="filled"
+        {...form.getInputProps('subject')}
+      />
+      <Textarea
+        mt="md"
+        label="Message"
+        placeholder="Your message"
+        maxRows={10}
+        minRows={5}
+        autosize
+        name="message"
+        variant="filled"
+        {...form.getInputProps('message')}
+      />
+
+      <Group position="center" mt="xl">
+        <Button className='contact-form-btn' type="submit" size="md">
+          Send message
+        </Button>
+      </Group>
+
+      <input type="hidden" name="redirect" value="https://web3forms.com/success"/>
+    </form>
   );
 }

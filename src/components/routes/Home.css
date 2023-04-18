@@ -41,6 +41,6 @@
 }
 
 .jump-to-map-btn:hover {
-  background-color: #6faa89;
+  background-color: #6faa89;  /* TODO: Exctract this into common COLORS constant to match other buttons (e.g. contact page btn) */
 }
 

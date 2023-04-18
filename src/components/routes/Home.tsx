@@ -13,11 +13,11 @@ export function Home() {
   return (
     <div className="body-content">
       <div style={{ position: 'relative', textAlign: 'center', overflow: 'auto', marginTop: '30px', marginBottom: '30px' }}>
-        <h3 className='heading-text'><span style={TEXT_HIGHLIGHT_STYLE}>Therapy</span> and <span style={TEXT_HIGHLIGHT_STYLE}>counseling</span> should be affordable for <span style={TEXT_HIGHLIGHT_STYLE}>everyone.</span></h3>
+        <h3 className='heading-text'><span style={TEXT_HIGHLIGHT_STYLE}>Therapy</span> and <span style={TEXT_HIGHLIGHT_STYLE}>counseling</span> should be affordable <span style={TEXT_HIGHLIGHT_STYLE}>for everyone.</span></h3>
         <img src={TherapyImage} className='therapy-img' alt="Psychologist providing mental health services and counselling with psychotherapy"></img>
       </div>
       <div className='home-text-content-wrapper'>
-        <p style={{ marginBottom: '0px', textAlign: 'center', maxWidth: '60vw', margin: 'auto' }}>...and that's why we have created the <span style={{ color: COLORS.primaryHighlight }}>EveryHealth training clinics map</span> &mdash; a mental health resource to help you find affordable mental heath care.</p>
+        <p style={{ marginBottom: '0px', textAlign: 'center', maxWidth: '60vw', margin: 'auto' }}>...and that's why we have created the <span style={{ color: COLORS.primaryHighlight, fontWeight: 'bold' }}>EveryHealth training clinics map</span> &mdash; a mental health resource to help you find affordable mental heath care.</p>
         <Group position="center" mt="xl">
           <a href={'#trainingClinicsMap'} rel="noopener noreferrer">
             <Button className='jump-to-map-btn' type="submit" size="md">

@@ -6,4 +6,5 @@ export const COLORS = {
   header: 'white',
   white: '#FFF',  // Defined in the constant just in case we want to switch to a common off-white shade in the future 
   black: '#000',  // Defined in the constant just in case we want to switch to a common off-black shade in the future
+  buttonHover: '',  // TODO
 }

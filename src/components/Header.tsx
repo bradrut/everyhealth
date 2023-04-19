@@ -105,40 +105,46 @@ const useStyles = createStyles((theme) => ({
 
 interface HeaderResponsiveProps {
   links: { link: string; label: string }[];
+  activeLink: string | undefined;
+  setActiveRoute: Function; // Callback to update the activeRoute state on the App component
 }
 
-export function HeaderResponsive({ links }: HeaderResponsiveProps) {
-  /**
-   * Set activeLink based on the current url pathname. This ensures that the active link is accurate
-   * even after a hard refresh. 
-   */
-  let location = useLocation();
-  const [ activeLink, setActiveLink ] =
-  useState((links.find((link) => ('/' + link.link === location.pathname)))?.link);
+export function HeaderResponsive({ links, activeLink, setActiveRoute }: HeaderResponsiveProps) {
 
   const [ opened, { toggle } ] = useDisclosure(false);
   const { classes, cx } = useStyles();
 
   const linkComponents = links.map((link) => (
-    <div>
-      <Link
-        key={link.label}
-        to={link.link}
-        className={cx(classes.link, { [classes.linkActive]: activeLink === link.link })}
-        onClick={(event: any) => {
-          setActiveLink(link.link);
-        }}
-      >
-        {link.label}
-      </Link>
-    </div>
+    <Link
+      key={link.label}
+      to={link.link}
+      rel="noopener noreferrer"
+      className={cx(classes.link, { [classes.linkActive]: activeLink === link.link })}
+      onClick={(event: any) => {
+        // Update the activeRoute state on the App component. This will re-render this header and ensure
+        // that the appropriate activeLink is passed in, so that the UI displays correctly.
+        setActiveRoute(link.link);
+      }}
+    >
+      {link.label}
+    </Link>
   ));
 
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root + ' App-background-gradient'}>
       <Container className={classes.header}>
         <div>
-          <Link to={'/'} rel="noopener noreferrer" className={classes.logoContainer}>
+          <Link
+            key={'logoLink'}
+            to={''}
+            rel="noopener noreferrer"
+            className={classes.logoContainer}
+            onClick={(event: any) => {
+              // Update the activeRoute state on the App component. This will re-render this header and ensure
+              // that the appropriate activeLink is passed in, so that the UI displays correctly.
+              setActiveRoute('');
+            }}
+          >
             <img src={LogoIcon} style={{ maxWidth: '44px' }}></img>
             <p style={{ color: COLORS.primaryHighlight, fontFamily: 'verdana', fontSize: 20, float: 'left', lineHeight: .8 }}>Every
               <span style={{ color: COLORS.white }}>Health

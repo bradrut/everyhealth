@@ -1,0 +1,45 @@
+.contact-form {
+  margin-top: 4vh;
+  /* padding: 30px; */
+  padding-top: 0px;
+  text-shadow: 1px 1px 50px #000;
+}
+
+@media only screen and (max-width: 1026px) {
+  .contact-form {
+    margin-top: 8vh;
+  }
+}
+
+.contact-form-card {
+  /* background-color: #79B996; */
+  border: 2px solid #79B996;
+  border-radius: 5px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.contact-form-title {
+  color: #79B996;
+  font-family: Verdana, serif;
+}
+
+.contact-form-subtitle {
+  font-family: Verdana, serif;
+  text-align: center;
+}
+
+.mantine-InputWrapper-label {
+  color: #FFF;
+  font-weight: bold;
+}
+
+.contact-form-btn {
+  background-color: #79B996;
+  color: black;
+  font-weight: 400;
+}
+
+.contact-form-btn:hover {
+  background-color: #6faa89;  /* TODO: Exctract this into common COLORS constant to match other buttons (e.g. homepage btn) */
+}

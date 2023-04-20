@@ -1,0 +1,21 @@
+.error-page-wrapper {
+  padding-top: 0px;
+  text-shadow: 1px 1px 50px #000;
+  height: 100vh;
+  background-color: #485c70;
+  max-width: none;
+  color: white;
+  text-align: center;
+  /* font-family: theme.fontFamily; */
+  padding-top: 30vh;
+}
+
+.error-page-title {
+  color: #79B996;
+  font-family: Verdana, serif;
+}
+
+.error-page-subtitle {
+  font-family: Verdana, serif;
+  text-align: center;
+}

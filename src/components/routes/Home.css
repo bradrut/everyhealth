@@ -1,0 +1,46 @@
+.body-content {
+  width: 90vw;
+  margin-top: 65px;
+  margin-bottom: 60px;
+}
+
+.home-text-content-wrapper p {
+  /* text-align: center; */
+}
+
+@media only screen and (max-width: 1026px) {
+  .body-content {
+    width: 94vw;
+  }
+}
+
+.therapy-img {
+  max-width: 60vw;
+  float: center;
+  border-radius: 2px;
+  filter: brightness(45%);
+  z-index: 1;
+}
+
+.heading-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-shadow: 2px 2px 18px #000;
+  width: 60%;
+  max-width: 45vw;
+}
+
+.jump-to-map-btn {
+  background-color: #79B996;
+  color: black;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.jump-to-map-btn:hover {
+  background-color: #6faa89;  /* TODO: Exctract this into common COLORS constant to match other buttons (e.g. contact page btn) */
+}
+

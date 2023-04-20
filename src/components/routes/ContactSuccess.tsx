@@ -1,11 +1,12 @@
 import React from 'react';
-
-import { TextInput, Textarea, SimpleGrid, Group, Title, Button } from '@mantine/core';
-import { useForm } from '@mantine/form';
+import { Link } from 'react-router-dom'
+import { Title } from '@mantine/core';
 
 import './ContactSuccess.css';
+import { useRoutingContext } from '../../App';
 
 export default function ContactSuccess() {
+  const { setActiveRoute } = useRoutingContext();
 
   return (
     <div className='contact-success-wrapper'>
@@ -13,13 +14,25 @@ export default function ContactSuccess() {
         order={2}
         size="h1"
         // sx={(theme) => ({ fontFamily: 'Verdana, serif' })}
-        weight={900}
+        weight={500}
         align="center"
-        className='contact-form-title contact-form-heading'
+        className='contact-success-title'
       >
-        Success!
+        Thanks for reaching out!
       </Title>
-      <p className='contact-form-subtitle contact-form-heading'>Thanks for reaching out! We've received your message and will get back to you soon.</p>
+      <p className='contact-success-subtitle'>We've received your message and will get back to you soon.</p>
+      <Link
+        key={'contactSuccessReturnHome'}
+        to={'/'}
+        rel="noopener noreferrer"
+        style={{ color: 'white', fontSize: '16px' }}
+        onClick={(event: any) => {
+          // Update the activeRoute state on the App component. This will re-render this header and ensure
+          // that the appropriate activeLink is passed in, so that the UI displays correctly.
+          setActiveRoute('');
+        }}>
+          Return home
+      </Link>
     </div>
   );
 }

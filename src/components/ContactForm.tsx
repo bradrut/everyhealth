@@ -115,7 +115,7 @@ export default function ContactForm() {
         </Button>
       </Group>
 
-      <input type="hidden" name="redirect" value="https://web3forms.com/success"/>
+      <input type="hidden" name="redirect" value={process.env.REACT_APP_WEBSITE_DOMAIN + 'contact/success'}/>
     </form>
   );
 }

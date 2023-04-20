@@ -11,6 +11,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from './components/routes/Home';
 import Contact from './components/routes/Contact';
+import ContactSuccess from './components/routes/ContactSuccess';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/contact',
-        element: <Contact />,  // TODO!
+        element: <Contact />,
+      },
+      {
+        path: '/contact/success',
+        element: <ContactSuccess />,
       },
     ]
   },

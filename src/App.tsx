@@ -1,17 +1,20 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router';
-import { Outlet } from 'react-router';
+import { Outlet, useLocation, useOutletContext } from 'react-router-dom';
 
 import './App.css';
 import { HeaderResponsive } from './components/Header';
+import { HEADER_LINKS } from './common/constants';
 
-const HEADER_LINKS = [
-  { link: '', label: 'Home' },
-  { link: 'about', label: 'About' },
-  { link: 'contact', label: 'Contact' },
-];
+type RoutingContextType = {
+  activeRoute: string | undefined,
+  setActiveRoute: Function,
+};
 
-function App() {
+export function useRoutingContext() {
+  return useOutletContext<RoutingContextType>();
+}
+
+export default function App() {
 
   // TODO: Update font family
 
@@ -26,9 +29,7 @@ function App() {
   return (
     <div className="App App-background-gradient">
       <HeaderResponsive links={HEADER_LINKS} activeLink={ activeRoute } setActiveRoute={ setActiveRoute }></HeaderResponsive>
-      <Outlet />
+      <Outlet context={{ activeRoute, setActiveRoute }}/>
     </div>
   );
 }
-
-export default App;

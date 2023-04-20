@@ -1,5 +1,22 @@
 .contact-success-wrapper {
-  margin-top: 6vh;
-  padding: 30px;
+  /* margin-top: 3vh; */
+  /* padding: 30px; */
+  padding-top: 0px;
   text-shadow: 1px 1px 50px #000;
+}
+
+@media only screen and (max-width: 1026px) {
+  .contact-success-wrapper {
+    margin-top: 8vh;
+  }
+}
+
+.contact-success-title {
+  color: #79B996;
+  font-family: Verdana, serif;
+}
+
+.contact-success-subtitle {
+  font-family: Verdana, serif;
+  text-align: center;
 }

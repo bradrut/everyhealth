@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import {
   createStyles,
   Header,
@@ -17,7 +16,7 @@ import '../App.css';
 import { COLORS } from '../common/colors';
 import LogoIcon from '../assets/leaves-icon.svg';
 
-const HEADER_HEIGHT = rem(60);
+const HEADER_HEIGHT = rem(58);
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -77,6 +76,8 @@ const useStyles = createStyles((theme) => ({
     display: 'block',
     lineHeight: 1,
     padding: `${rem(8)} ${rem(12)}`,
+    marginLeft: '.3rem',
+    // marginRight: ,
     // borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color: '#FFF',
@@ -96,7 +97,9 @@ const useStyles = createStyles((theme) => ({
   linkActive: {
     '&, &:hover': {
       color: COLORS.secondaryHighlight + ' !important',
-      paddingBottom: '0.6rem 0.75rem',
+      // paddingBottom: '0.6rem 0.75rem',
+      paddingBottom: '.7rem',
+      // translate: '0px 1px',
       fontWeight: 'bold',
       borderBottom: '2px solid ' + COLORS.secondaryHighlight,
     },

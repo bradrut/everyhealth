@@ -8,7 +8,7 @@ def combine_line(line):
   return str
  
 # opening the CSV file
-with open('../aptc-training-clinics.csv', mode ='r')as inputFile:
+with open('../aptc-training-clinics.csv', mode ='r') as inputFile:
   # initialize Nominatim API
   geolocator = Nominatim(user_agent="care-4-everyone")
 

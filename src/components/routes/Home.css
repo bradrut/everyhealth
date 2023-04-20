@@ -1,12 +1,12 @@
 .body-content {
-  width: 60vw;
+  width: 90vw;
   margin-top: 65px;
   margin-bottom: 60px;
 }
 
-/* .home-text-content-wrapper p {
-  text-align: center;
-} */
+.home-text-content-wrapper p {
+  /* text-align: center; */
+}
 
 @media only screen and (max-width: 1026px) {
   .body-content {

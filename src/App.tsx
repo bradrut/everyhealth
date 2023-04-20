@@ -19,9 +19,9 @@ export default function App() {
   // TODO: Update font family
 
   /**
-     * Set activeRoute based on the current url pathname. This ensures that the active link in the header
-     * is accurate even after a hard refresh. 
-     */
+   * Set activeRoute based on the current url pathname. This ensures that the active link in the header
+   * is accurate even after a hard refresh. 
+   */
   const location = useLocation();
   const [ activeRoute, setActiveRoute ] =
     useState<string | undefined>((HEADER_LINKS.find((link) => ('/' + link.link === location.pathname)))?.link);

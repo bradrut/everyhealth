@@ -12,12 +12,13 @@ import reportWebVitals from './reportWebVitals';
 import Home from './components/routes/Home';
 import Contact from './components/routes/Contact';
 import ContactSuccess from './components/routes/ContactSuccess';
+import ErrorPage from './components/routes/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    // errorElement: <ErrorPage />, // TODO!
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',

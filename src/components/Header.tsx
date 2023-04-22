@@ -134,7 +134,7 @@ export function HeaderResponsive({ links, activeLink, setActiveRoute }: HeaderRe
   ));
 
   return (
-    <Header height={HEADER_HEIGHT} mb={120} className={classes.root + ' App-background-gradient'}>
+    <Header height={HEADER_HEIGHT} mb={120} className={classes.root + ' header-background'}>
       <Container className={classes.header}>
         <div>
           <Link

@@ -1,36 +1,14 @@
 .body-content {
   width: 90vw;
-  margin-top: 65px;
+  margin-top: 50px;
   margin-bottom: 60px;
-}
-
-.home-text-content-wrapper p {
-  /* text-align: center; */
 }
 
 @media only screen and (max-width: 1026px) {
   .body-content {
     width: 94vw;
+    margin-top: 55px;
   }
-}
-
-.therapy-img {
-  max-width: 60vw;
-  float: center;
-  border-radius: 2px;
-  filter: brightness(45%);
-  z-index: 1;
-}
-
-.heading-text {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-shadow: 2px 2px 18px #000;
-  width: 60%;
-  max-width: 45vw;
 }
 
 .jump-to-map-btn {

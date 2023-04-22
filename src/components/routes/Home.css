@@ -1,6 +1,7 @@
 .body-content {
   width: 90vw;
-  margin-top: 50px;
+  margin-top: 60px;
+  /* margin-top: 8vh; */
   margin-bottom: 60px;
 }
 
@@ -9,6 +10,40 @@
     width: 94vw;
     margin-top: 55px;
   }
+}
+
+.landing-content {
+  /* position: absolute;
+  top: 40%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  z-index: 1;
+  /* text-shadow: 1px 1px 15px #000; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 60%; */
+  /* max-width: 45vw; */
+}
+
+.heading-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-shadow: 2px 2px 18px #000;
+  width: 60%;
+  max-width: 45vw;
+  padding-bottom: 50px;
+}
+
+.subheading-text {
+  margin-bottom: 10px;
+  text-align: 'center';
+  margin: 'auto';
+  z-index: 1;
+  position: 'inherit';
 }
 
 .jump-to-map-btn {
@@ -20,5 +55,9 @@
 
 .jump-to-map-btn:hover {
   background-color: #6faa89;  /* TODO: Exctract this into common COLORS constant to match other buttons (e.g. contact page btn) */
+}
+
+.subsection-content {
+  margin-top: 50vh;
 }
 

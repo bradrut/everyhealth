@@ -9,7 +9,7 @@ const TEXT_HIGHLIGHT_STYLE = { color: COLORS.primaryHighlight };
 export default function ImageHeading() {
   return (
     <div className='heading-container' style={{ position: 'relative', textAlign: 'center', overflow: 'auto', marginTop: '30px', marginBottom: '30px' }}>
-      <h3 className='heading-text'><span style={TEXT_HIGHLIGHT_STYLE}>Therapy</span> and <span style={TEXT_HIGHLIGHT_STYLE}>counseling</span> can be affordable <span style={TEXT_HIGHLIGHT_STYLE}>for everyone.</span></h3>
+      <h3 className='heading-text'><span style={TEXT_HIGHLIGHT_STYLE}></span>You deserve <span style={TEXT_HIGHLIGHT_STYLE}>affordable</span> mental health care.<span style={TEXT_HIGHLIGHT_STYLE}></span></h3>
       <img src={TherapyImage} className='therapy-img' alt="Psychologist providing mental health services and counselling with psychotherapy"/>
     </div>
   )

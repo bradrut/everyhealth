@@ -25,6 +25,7 @@ const useStyles = createStyles((theme) => ({
     width: '100%',
     marginBottom: '1rem !important',
     border: 'none',
+    backdropFilter: 'blur(15px)',
   },
 
   logoContainer: {

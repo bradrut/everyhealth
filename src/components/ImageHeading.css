@@ -1,20 +1,21 @@
 .heading-container {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+  overflow: auto;
   z-index: 1;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .therapy-img {
   max-width: 60vw;
-  /* max-height: 100vh; */
-  /* max-height: 100vw; */
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
   float: center;
   border-radius: 2px;
-  filter: brightness(55%);
+  filter: brightness(60%);
   z-index: 0;
-  /* translate: 20; */
-  /* object-fit: cover; */
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 1026px) {
@@ -30,6 +31,7 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   text-shadow: 2px 2px 18px #000;
-  width: 60%;
+  width: 80%;
   max-width: 45vw;
+  font-size: xx-large;
 }

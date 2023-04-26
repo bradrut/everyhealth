@@ -27,9 +27,9 @@ export default function App() {
     useState<string | undefined>((HEADER_LINKS.find((link) => ('/' + link.link === location.pathname)))?.link);
 
   return (
-    <div>
+    <div className='App-container'>
       <div className='App-background-gradient'></div>
-      <div className="App">
+      <div className="App-content">
         <HeaderResponsive links={HEADER_LINKS} activeLink={ activeRoute } setActiveRoute={ setActiveRoute }></HeaderResponsive>
         <Outlet context={{ activeRoute, setActiveRoute }}/>
       </div>

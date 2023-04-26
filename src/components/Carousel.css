@@ -1,9 +1,22 @@
-.carousel {
+.mantine-Carousel-viewport {
   max-width: 60vw;
+  max-height: 40vh;
+}
+
+.carousel::before {
+  width: 60vw;
+}
+
+.carousel {
   float: center;
   border-radius: 2px;
-  filter: brightness(55%);
   z-index: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  overflow: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 1026px) {
@@ -12,7 +25,22 @@
   }
 }
 
-Slide {
+.slide {
+  width: 100%;
   max-width: 60vw;
-  width: 60vw;
+}
+
+.meditation-img {
+  max-width: 60vw;
+  max-height: 438px;
+  /* float: center;
+  border-radius: 2px;
+  z-index: 1; */
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1026px) {
+  .meditation-img {
+    max-width: 94vw;
+  }
 }

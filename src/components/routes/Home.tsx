@@ -1,14 +1,10 @@
-import React from 'react';
 import { Button, Group } from '@mantine/core';
 
 import './Home.css';
-import HomeCarousel from '../Carousel';
 import Map from '../Map';
 import { COLORS } from '../../common/colors';
 import { APTC_TRAINING_CLINICS } from '../../data/aptcTrainingClinics';
 import ImageHeading from '../ImageHeading';
-
-const TEXT_HIGHLIGHT_STYLE = { color: COLORS.primaryHighlight };
 
 export function Home() {
 
@@ -26,7 +22,8 @@ export function Home() {
         </Group>
       </div>
       <div id='trainingClinics' className='subsection-content'>
-        <div className='home-text-content-wrapper'>
+        <Map orgData={APTC_TRAINING_CLINICS} />
+        <div className='qa-content-wrapper'>
           <h6>What are psychology training clinics?</h6>
           <p>If you are considering seeking the support of a therapist or counselor but the cost seems insurmountable, consider
             looking into <b>official APTC training clinics</b> near you. These clinics, officially recognized by the <a href={'https://www.aptc.org/'} target="_blank" rel="noopener noreferrer" style={{ color: COLORS.primaryHighlight }}>Association of Psychology Training Clinics (APTC)</a>, are typically universities...</p>
@@ -37,8 +34,7 @@ export function Home() {
           <h6>I have more questions about training clinics and the services they offer...</h6>
           <p>If you're still uncertain whether you'd like to seek counseling at a training clinic, use our training clinics map to find a training clinic near you. Most clinics post further information on their website, including the cost of their services.</p>
         </div>
-        <Map orgData={APTC_TRAINING_CLINICS} />
-        </div>
+      </div>
     </div>
   );
 }

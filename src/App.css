@@ -27,7 +27,7 @@ background: -webkit-linear-gradient(271deg, hsla(210, 22%, 36%, 1) 55%, hsla(341
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#485C70", endColorstr="#32161F", GradientType=1 ); */
   /* background: transparent; */
-  background-image: url('./assets/sunset-gradient2.jpg');
+  background-image: url('./assets/sunset-gradient2-cropped.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: calc(131 / 200 * 100%) calc(66 / 200 * 100%);

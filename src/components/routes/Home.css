@@ -1,25 +1,31 @@
 .body-content {
-  width: 90vw;
+  width: 100vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
   margin-top: 65px;
+  /* margin-top: 8vh; */
   margin-bottom: 60px;
-}
-
-.home-text-content-wrapper p {
-  /* text-align: center; */
 }
 
 @media only screen and (max-width: 1026px) {
   .body-content {
-    width: 94vw;
+    width: 100vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin-top: 55px;
   }
 }
 
-.therapy-img {
-  max-width: 60vw;
-  float: center;
-  border-radius: 2px;
-  filter: brightness(45%);
+.landing-content {
+  width: 100%;
+  height: calc(100vh - 60px);  /* Viewport height minus the height of the app header, so that the container ends at the end of the landing gradient */
+  max-width: 100vw;
+  max-height: 100vh;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Verdana;
 }
 
 .heading-text {
@@ -27,10 +33,23 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 1;
   text-shadow: 2px 2px 18px #000;
   width: 60%;
   max-width: 45vw;
+  padding-bottom: 50px;
+  /* font-family: Verdana; */
+  font-weight: 600;
+}
+
+.subheading-text {
+  margin-bottom: 15px;
+  margin-top: 18px;
+  text-align: 'center';
+  margin: 'auto';
+  z-index: 1;
+  position: 'inherit';
+  font-size: 14px;
 }
 
 .jump-to-map-btn {
@@ -42,5 +61,17 @@
 
 .jump-to-map-btn:hover {
   background-color: #6faa89;  /* TODO: Exctract this into common COLORS constant to match other buttons (e.g. contact page btn) */
+}
+
+.subsection-content {
+  padding-top: 8vh;
+}
+
+h6 {
+  margin-bottom: 8px;
+}
+
+.qa-content-wrapper {
+
 }
 

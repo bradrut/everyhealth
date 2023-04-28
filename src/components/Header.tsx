@@ -25,6 +25,7 @@ const useStyles = createStyles((theme) => ({
     width: '100%',
     marginBottom: '1rem !important',
     border: 'none',
+    backdropFilter: 'blur(15px)',
   },
 
   logoContainer: {
@@ -55,8 +56,9 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
     height: '100%',
     maxWidth: 'none',
-    marginLeft: '5vw',
-    marginRight: '5vw',
+    marginLeft: '2vw',
+    marginRight: '2vw',
+    fontFamily: 'Verdana',
   },
 
   links: {
@@ -81,7 +83,8 @@ const useStyles = createStyles((theme) => ({
     // borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color: '#FFF',
-    fontSize: theme.fontSizes.sm,
+    // fontSize: theme.fontSizes.sm,
+    fontSize: '13px',
     fontWeight: 'normal',
 
     '&:hover': {
@@ -134,7 +137,7 @@ export function HeaderResponsive({ links, activeLink, setActiveRoute }: HeaderRe
   ));
 
   return (
-    <Header height={HEADER_HEIGHT} mb={120} className={classes.root + ' App-background-gradient'}>
+    <Header height={HEADER_HEIGHT} mb={120} className={classes.root + ' header-background'}>
       <Container className={classes.header}>
         <div>
           <Link
@@ -148,7 +151,7 @@ export function HeaderResponsive({ links, activeLink, setActiveRoute }: HeaderRe
               setActiveRoute('');
             }}
           >
-            <img src={LogoIcon} style={{ maxWidth: '44px' }}></img>
+            <img src={LogoIcon} style={{ maxWidth: '44px' }} alt='Green leaf logo icon'></img>
             <p style={{ color: COLORS.primaryHighlight, fontFamily: 'verdana', fontSize: 20, float: 'left', lineHeight: .8 }}>Every
               <span style={{ color: COLORS.white }}>Health
                 <span style={{ fontSize: '13px' }}>
@@ -172,7 +175,7 @@ export function HeaderResponsive({ links, activeLink, setActiveRoute }: HeaderRe
           )}
         </Transition>
       </Container>
-      <Divider color={COLORS.header} size={'xs'} style={{ maxWidth: '95vw', marginLeft: 'auto', marginRight: 'auto' }}/>
+      <Divider style={{ maxWidth: '98vw', marginLeft: 'auto', marginRight: 'auto' }} color={COLORS.header} size={'xs'}/>
     </Header>
   );
 }

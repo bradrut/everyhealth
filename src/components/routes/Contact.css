@@ -1,5 +1,5 @@
 .contact-form {
-  margin-top: 4vh;
+  /* margin-top: 2vh; */
   /* padding: 30px; */
   padding-top: 0px;
   text-shadow: 1px 1px 50px #000;
@@ -7,7 +7,7 @@
 
 @media only screen and (max-width: 1026px) {
   .contact-form {
-    margin-top: 8vh;
+    /* margin-top: 8vh; */
   }
 }
 
@@ -20,11 +20,14 @@
 }
 
 .contact-form-title {
+  position: relative;
   color: #79B996;
   font-family: Verdana, serif;
+  z-index: 2;
 }
 
 .contact-form-subtitle {
+  position: relative;
   font-family: Verdana, serif;
   text-align: center;
 }

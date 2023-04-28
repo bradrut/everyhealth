@@ -19,12 +19,12 @@ function Map({ centerLat=37.0902, centerLong=-95.7129, zoom=4, scrollWheelZoom=t
   return (
     <MapContainer id='trainingClinicsMap' center={[centerLat, centerLong]} zoom={zoom} scrollWheelZoom={scrollWheelZoom}>
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | Map marker icons generated with <a href="https://www.geoapify.com/">Geoapify</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
       {/* <MapMarker positionLat={37.0902} positionLong={-95.7129} orgInfo={{ name: 'Test Clinic', url: 'https://testClinicWebsite.com/' }}/> */}
       <>
         {orgData?.map(data => (
-          <MapMarker orgInfo={data}/>
+          <MapMarker key={data.orgName + '; ' + data.markerLat} orgInfo={data}/>
         ))}
       </>
     </MapContainer>
